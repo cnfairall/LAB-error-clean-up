@@ -1,7 +1,7 @@
-import createId from './createId';
 import houses from '../utils/houses';
 import studentsOnDom from '../utils/studentsOnDom';
 import students from '../utils/sample_data/students';
+import uuidv4 from '../utils/uuid';
 
 // sorts student to a house and then place them in the students array
 const sortStudent = (e) => {
@@ -13,7 +13,7 @@ const sortStudent = (e) => {
 
     // create the new student object
     students.push({
-      id: createId(students),
+      id: uuidv4(students),
       name: student.value,
       house: sortingHat.house,
       crest: sortingHat.crest
